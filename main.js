@@ -4,8 +4,8 @@ import {
   MeshNormalMaterial,
   PerspectiveCamera,
   Scene,
-  WebGLRenderer,
-} from "three";
+  WebGPURenderer,
+} from "three/webgpu";
 
 const FIELD_OF_VIEW = 70;
 const NEAR_PLANE = 0.1;
@@ -27,7 +27,8 @@ camera.position.z = CAMERA_DISTANCE;
 const cube = new Mesh(new BoxGeometry(), new MeshNormalMaterial());
 scene.add(cube);
 
-const renderer = new WebGLRenderer({ antialias: true, canvas });
+const renderer = new WebGPURenderer({ alpha: false, antialias: true, canvas });
+await renderer.init();
 
 const resize = () => {
   const { clientHeight, clientWidth } = canvas;
