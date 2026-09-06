@@ -1,4 +1,4 @@
-# dig
+# minthree
 
 Minimal three.js sample scene: one rotating cube, no build step.
 
