@@ -1,0 +1,24 @@
+{
+  "name": "dig",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal three.js sample scene.",
+  "license": "MIT",
+  "author": "Julien QUENTIN",
+  "type": "module",
+  "scripts": {
+    "check": "biome check --write --error-on-warnings",
+    "ci": "biome ci --error-on-warnings && tsc -p jsconfig.json",
+    "prepare": "lefthook install",
+    "start": "serve",
+    "typecheck": "tsc -p jsconfig.json"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.12",
+    "@types/three": "^0.185.4",
+    "lefthook": "^2.1.12",
+    "serve": "^14.2.4",
+    "three": "^0.182.0",
+    "typescript": "^7.0.2"
+  }
+}
