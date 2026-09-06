@@ -10,8 +10,9 @@ npm start
 ```
 
 Then open the printed `http://localhost:...` address. The import map in
-`index.html` points at `node_modules/three/build/three.module.js`, so the
-server must also serve `node_modules`. `npm start` does that.
+`index.html` loads three.js from jsDelivr, so the page also runs on any static
+host. `npm install` gives Biome, TypeScript, the local server and the three.js
+types. Keep the version in the import map equal to the one in `package.json`.
 
 ## Check
 
